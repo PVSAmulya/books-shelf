@@ -1,0 +1,24 @@
+<div class='sort-search'>
+  <div class='sort-search-container'>
+    <div class='sort-by'>
+      <h3>Sort by:</h3>
+      <div class="input-radio-btn">
+        <input type="radio" name="sortBy" value="author" (click)="onSort($event)"> Surname of the author<br>
+        <input type="radio" name="sortBy" value="pages" (click)="onSort($event)"> Number of pages<br>
+        <input type="radio" name="sortBy" value="date" (click)="onSort($event)"> Release date
+      </div>
+    </div>
+    <div class='search'>
+      <h3>Show only:</h3>
+      <div class="input-search">
+        <span>Pages:<input #pages [(value)]="noOfPages" placeholder="Filter By Pages"
+            (keyup.enter)="showOnly(pages.value)" name="noOfPages" /></span><br>
+        <button id="search-btn" type="submit" (click)="showOnly(pages.value)">
+          Search By
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class='user-message' *ngIf="userMsg">{{userNotification}}</div>
+</div>
+<app-book-shelf [sortedBooks]="sortedBooks"></app-book-shelf>

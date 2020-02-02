@@ -1,0 +1,14 @@
+<div class="book-shelf">
+  <div id="book" *ngFor="let item of sortedBooks">
+    <img class="images" [src]=item.cover.small>
+    <h2 class="title">{{item.title}}</h2>
+    <div class="book-specs">
+      <div id="author">By {{item.author}}</div>
+      <ul id="specList">
+        <li>Release Date: {{item.releaseDate}}</li>
+        <li>Pages: {{item.pages}}</li>
+        <span id="shopLink">Link: <a [href]=item.link>shop</a></span>
+      </ul>
+    </div>
+  </div>
+</div>

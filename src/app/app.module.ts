@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BooksService } from './modules/book-shelf/books.service';
+import { SortSearchService } from './modules/sort-search/sort-search.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BooksService, SortSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
