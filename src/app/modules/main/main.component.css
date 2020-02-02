@@ -4,16 +4,15 @@ body {
 }
 
 .alert-content {
-  /** It's 160px, but there is slight error margin while calculating - not sure, but providing extra 5px prevents scroll bar*/
-  min-height: calc(100% - 4.5em);
-  height: calc(100% - 4.5em);
+  /* min-height: calc(100% - 4.5em); */
+  /* height: calc(100% - 4.5em); */
+  height: 100%;
   overflow: visible;
 }
 
 /* Style only for Google Chrome/Opera */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .alert-content {
-    /** It's 160px, but there is slight error margin while calculating - not sure, but providing extra 5px prevents scroll bar*/
     min-height: calc(100% - 4.5em);
     overflow: visible;
   }
@@ -22,7 +21,6 @@ body {
 /* Style only for Mozilla Firefox */
 @-moz-document url-prefix() {
   .alert-content {
-    /** It's 160px, but there is slight error margin while calculating - not sure, but providing extra 5px prevents scroll bar*/
     min-height: calc(100% - 4.5em);
     height: calc(100% - 4.5em);
     overflow: visible;
@@ -33,7 +31,6 @@ body {
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
   .alert-content {
-    /** It's 160px, but there is slight error margin while calculating - not sure, but providing extra 5px prevents scroll bar*/
     min-height: calc(100vh - 4.5em);
     height: calc(100% - 4.5em);
     overflow: visible;
